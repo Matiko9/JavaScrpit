@@ -1,0 +1,26 @@
+//exercises 4
+
+function sumInput() {
+    let values = [];
+    let input;
+
+    while (true) {
+        input = prompt('Podaj liczbę:');
+
+        if (input === '' || input === null || !isFinite(input)) {
+            break;
+        }
+
+        values.push(+input);
+    }
+
+    let sum = 0;
+    for (let i = 0; i < values.length; i++) {
+        sum += values[i];
+    }
+
+    return sum;
+}
+
+let result = sumInput();
+console.log('Suma wprowadzonych liczb to: ' + result);
